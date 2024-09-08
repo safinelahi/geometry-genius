@@ -28,115 +28,185 @@
       }
     </style>
   </head>
-  <body class="font-inter">
+  <body class="font-inter mt-[50px] mr-[50px] ml-[50px] mb-[180px]">
     <header></header>
     <main>
       <!-- main content container -->
-      <div>
+      <div class="flex gap-6">
         <!-- shape card container -->
-        <div class="">
-            <!-- Triangle card -->
-          <div class=" w-[437px] rounded-lg border-[1px] border-[#111111] flex flex-col justify-center items-center py-[50px]">
+        <div class="flex-1 grid grid-cols-3 gap-3">
+          <!-- Triangle card -->
+          <div
+            class="rounded-lg border-[1px] border-gray-200 flex flex-col justify-center items-center py-[50px]"
+          >
             <figure class="mb-[50px]">
               <img src="images/triangle.png" alt="" />
             </figure>
-            <div class="">
-              <h2 class=" font-bold text-[25px] text-[#414141] text-center mb-[10px]">Triangle</h2>
+            <div class=" ">
+              <h2
+                class="font-bold text-[25px] text-[#414141] text-center mb-[10px]"
+              >
+                Triangle
+              </h2>
               <p class="text-center mb-5">Area (A) = 0.5 x b x h</p>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <!-- Input -->
+              <div class="flex flex-row justify-center items-center">
+                <input
+                  class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
+                  type="text"
+                  id="triangle-base"
+                  placeholder="b"
+                />
+                <span class="ml-2 mr-4">cm</span>
+                <input
+                  class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
+                  type="text"
+                  id="triangle-height"
+                  placeholder="h"
+                />
+                <span class="ml-2 mr-4">cm</span>
+              </div>
               <div class="mt-[50px]">
-                <button
-                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold "
+                <button onclick="triangleCalculate()"
+                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
                 </button>
               </div>
             </div>
           </div>
-            <!-- Rectangle card -->
-          <div class=" w-[437px] rounded-lg border-[1px] border-[#111111] flex flex-col justify-center items-center py-[50px]">
+          <!-- Rectangle card -->
+          <div
+            class="rounded-lg border-[1px] border-gray-200 flex flex-col justify-center items-center py-[50px]"
+          >
             <figure class="mb-[50px]">
               <img src="images/rectangle.png" alt="" />
             </figure>
             <div class="">
-              <h2 class=" font-bold text-[25px] text-[#414141] text-center mb-[10px]">Rectangle</h2>
-              <p class="text-center mb-5">Area (A) = 0.5 x b x h</p>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <h2
+                class="font-bold text-[25px] text-[#414141] text-center mb-[10px]"
+              >
+                Rectangle
+              </h2>
+              <p class="text-center mb-5">Area (A) = w x I</p>
+              <!-- Input -->
+              <div class="flex flex-row justify-center items-center">
+                <input
+                  class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
+                  type="text"
+                  id=""
+                  placeholder="w"
+                />
+                <span class="ml-2 mr-4">cm</span>
+                <input
+                  class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
+                  type="text"
+                  id=""
+                  placeholder="l"
+                />
+                <span class="ml-2 mr-4">cm</span>
+              </div>
               <div class="mt-[50px]">
                 <button
-                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold "
+                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
                 </button>
               </div>
             </div>
           </div>
-            <!-- Parallelogram card -->
-          <div class=" w-[437px] rounded-lg border-[1px] border-[#111111] flex flex-col justify-center items-center py-[50px]">
+          <!-- Parallelogram card -->
+          <div
+            class="rounded-lg border-[1px] border-gray-200 flex flex-col justify-center items-center py-[50px]"
+          >
             <figure class="mb-[50px]">
               <img src="images/parallelogram.png" alt="" />
             </figure>
             <div class="">
-              <h2 class=" font-bold text-[25px] text-[#414141] text-center mb-[10px]">Parallelogram</h2>
-              <p class="text-center mb-5">Area (A) = 0.5 x b x h</p>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <h2
+                class="font-bold text-[25px] text-[#414141] text-center mb-[10px]"
+              >
+                Parallelogram
+              </h2>
+              <p class="text-center mb-5">Area (A) = b x h</p>
+              <!-- Input -->
+              <p class="text-center">b=10cm, h=12cm</p>
               <div class="mt-[50px]">
                 <button
-                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold "
+                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
                 </button>
               </div>
             </div>
           </div>
-            <!-- Rhombus card -->
-          <div class=" w-[437px] rounded-lg border-[1px] border-[#111111] flex flex-col justify-center items-center py-[50px]">
+          <!-- Rhombus card -->
+          <div
+            class="rounded-lg border-[1px] border-gray-200 flex flex-col justify-center items-center py-[50px]"
+          >
             <figure class="mb-[50px]">
               <img src="images/rhombus.png" alt="" />
             </figure>
             <div class="">
-              <h2 class=" font-bold text-[25px] text-[#414141] text-center mb-[10px]">Rhombus</h2>
-              <p class="text-center mb-5">Area (A) = 0.5 x b x h</p>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <h2
+                class="font-bold text-[25px] text-[#414141] text-center mb-[10px]"
+              >
+                Rhombus
+              </h2>
+              <p class="text-center mb-5">Area (A) =0.5 x d1 x d2</p>
+              <!-- Input -->
+              <p class="text-center">d1 = 16cm, d2 = 8cm</p>
               <div class="mt-[50px]">
                 <button
-                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold "
+                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
                 </button>
               </div>
             </div>
           </div>
-            <!-- Pentagon card -->
-          <div class=" w-[437px] rounded-lg border-[1px] border-[#111111] flex flex-col justify-center items-center py-[50px]">
+          <!-- Pentagon card -->
+          <div
+            class="rounded-lg border-[1px] border-gray-200 flex flex-col justify-center items-center py-[50px]"
+          >
             <figure class="mb-[50px]">
               <img src="images/pentagon.png" alt="" />
             </figure>
             <div class="">
-              <h2 class=" font-bold text-[25px] text-[#414141] text-center mb-[10px]">Pentagon</h2>
-              <p class="text-center mb-5">Area (A) = 0.5 x b x h</p>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <h2
+                class="font-bold text-[25px] text-[#414141] text-center mb-[10px]"
+              >
+                Pentagon
+              </h2>
+              <p class="text-center mb-5">Area (A) =0.5 x p x b</p>
+              <p class="text-center mb-5">p = 6cm, b = 10cm</p>
               <div class="mt-[50px]">
                 <button
-                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold "
+                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
                 </button>
               </div>
             </div>
           </div>
-            <!-- Ellipse card -->
-          <div class=" w-[437px] rounded-lg border-[1px] border-[#111111] flex flex-col justify-center items-center py-[50px]">
+          <!-- Ellipse card -->
+          <div
+            class="rounded-lg border-[1px] border-gray-200 flex flex-col justify-center items-center py-[50px]"
+          >
             <figure class="mb-[50px]">
               <img src="images/ellipse.png" alt="" />
             </figure>
             <div class="">
-              <h2 class=" font-bold text-[25px] text-[#414141] text-center mb-[10px]">Ellipse</h2>
-              <p class="text-center mb-5">Area (A) = 0.5 x b x h</p>
-              <p class="text-center">Area (A) = 0.5 x b x h</p>
+              <h2
+                class="font-bold text-[25px] text-[#414141] text-center mb-[10px]"
+              >
+                Ellipse
+              </h2>
+              <p class="text-center mb-5">Area (A) = ab</p>
+              <p class="text-center">a = 10cm, b = 4cm</p>
               <div class="mt-[50px]">
                 <button
-                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold "
+                  class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
                 </button>
@@ -145,13 +215,18 @@
           </div>
         </div>
         <!-- Area Calculation container -->
-        <div class="w-[437px] h-454.205px">
-          <h3 class="text-xl font-bold text text-[#111111] ">
+        <div
+          class="w-[437px] h-454.205px rounded-lg border-[1px] border-gray-200"
+        >
+          <h3
+            class="text-xl font-bold text text-[#111111] text-center mt-[30px]"
+          >
             Area Calculation
           </h3>
         </div>
       </div>
     </main>
+    <script src="js/triangleCalcu.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
