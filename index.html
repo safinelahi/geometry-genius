@@ -67,7 +67,8 @@
                 <span class="ml-2 mr-4">cm</span>
               </div>
               <div class="mt-[50px]">
-                <button onclick="triangleCalculate()"
+                <button
+                  onclick="triangleCalculate()"
                   class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
@@ -94,20 +95,20 @@
                 <input
                   class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
                   type="text"
-                  id=""
+                  id="rectangle-wight"
                   placeholder="w"
                 />
                 <span class="ml-2 mr-4">cm</span>
                 <input
                   class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
                   type="text"
-                  id=""
+                  id="rectangle-length"
                   placeholder="l"
                 />
                 <span class="ml-2 mr-4">cm</span>
               </div>
               <div class="mt-[50px]">
-                <button
+                <button onclick="rectangleCalculation()"
                   class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
@@ -223,6 +224,47 @@
           >
             Area Calculation
           </h3>
+          <!-- display triangle output -->
+          <div class="text-center mt-5">
+            <table class="mx-auto ">
+              <tr class="h-[55px]">
+                <td class="w-[125px]"><p>Triangle Area</p></td>
+                <td class="w-[125px]">
+                  <p class="text-xl">
+                    <span id="display-triangle-area">xxxxx</span><span class="ml-2">cm</span
+                    ><sup>2</sup>
+                  </p>
+                </td>
+                <td class="">
+                  <button
+                    id="convert-triangle-area"
+                    class="bg-[#1090D8] rounded-[4px] text-white w-[120px] text-sm font-medium p-2"
+                  >
+                    Convert to <span>m<sup>2</sup></span>
+                  </button>
+                </td>
+              </tr>
+              <!-- display rectangle area -->
+              <tr class="h-[55px]">
+                <td><p>Rectangle Area</p></td>
+                <td>
+                  <p class="text-xl">
+                    <span id="display-rectangle-area">xxxxx</span><span class="ml-2"
+                    >cm</span
+                    ><sup>2</sup>
+                  </p>
+                </td>
+                <td>
+                  <button
+                    id="convert-rectangle-area"
+                    class="bg-[#1090D8] rounded-[4px] text-white w-[120px] text-sm font-medium p-2"
+                  >
+                    Convert to <span>m<sup>2</sup></span>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </main>
