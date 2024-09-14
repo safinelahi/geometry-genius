@@ -131,9 +131,25 @@
               </h2>
               <p class="text-center mb-5">Area (A) = b x h</p>
               <!-- Input -->
-              <p class="text-center">b=10cm, h=12cm</p>
+              <!-- Input -->
+              <div class="flex flex-row justify-center items-center">
+                <input
+                  class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
+                  type="text"
+                  id="parallelogram-base"
+                  placeholder="b"
+                />
+                <span class="ml-2 mr-4">cm</span>
+                <input
+                  class="w-[95px] h-[32px] rounded bg-[#F1F1F1] px-3"
+                  type="text"
+                  id="parallelogram-height"
+                  placeholder="h"
+                />
+                <span class="ml-2 mr-4">cm</span>
+              </div>
               <div class="mt-[50px]">
-                <button
+                <button onclick="parallelogramCalculation()"
                   class="w-[350px] h-[56px] bg-[#1090D8] text-white rounded-lg text-xl font-bold"
                 >
                   Calculate
@@ -226,9 +242,9 @@
           </h3>
           <!-- display triangle output -->
           <div class="text-center mt-5">
-            <table class="mx-auto ">
+            <table class="mx-auto text-start">
               <tr class="h-[55px]">
-                <td class="w-[125px]"><p>Triangle Area</p></td>
+                <td class="w-[125px]"><p>Triangle</p></td>
                 <td class="w-[125px]">
                   <p class="text-xl">
                     <span id="display-triangle-area">xxxxx</span><span class="ml-2">cm</span
@@ -246,7 +262,7 @@
               </tr>
               <!-- display rectangle area -->
               <tr class="h-[55px]">
-                <td><p>Rectangle Area</p></td>
+                <td><p>Rectangle</p></td>
                 <td>
                   <p class="text-xl">
                     <span id="display-rectangle-area">xxxxx</span><span class="ml-2"
@@ -263,12 +279,31 @@
                   </button>
                 </td>
               </tr>
+              <!-- display parallelogram area  -->
+              <tr class="h-[55px]">
+                <td><p>Parallelogram</p></td>
+                <td>
+                  <p class="text-xl">
+                    <span id="display-parallelogram-area">xxxxx</span><span class="ml-2"
+                    >cm</span
+                    ><sup>2</sup>
+                  </p>
+                </td>
+                <td>
+                  <button
+                    id="convert-parallelogram-area"
+                    class="bg-[#1090D8] rounded-[4px] text-white w-[120px] text-sm font-medium p-2"
+                  >
+                    Convert to <span>m<sup>2</sup></span>
+                  </button>
+                </td>
+              </tr>
             </table>
           </div>
         </div>
       </div>
     </main>
-    <script src="js/triangleCalcu.js"></script>
+    <script src="js/calculation.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

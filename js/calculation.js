@@ -64,3 +64,48 @@ document.getElementById('convert-rectangle-area').addEventListener('click', func
     const convertRectangleArea= document.getElementById('display-rectangle-area')
     convertRectangleArea.innerText= rectangleArea / 100
 })
+
+// Parallelogram
+// global Parallelogram area 
+let parallelogramArea = 0
+
+// now used same type of repetition function and usable 
+function parallelogramCalculation(){
+    // parallelogram Base value 
+    const parallelogramBase = getInputValueById('parallelogram-base')
+   // console.log(parallelogramBase)
+
+   // parallelogram Height value 
+    const parallelogramHeight = getInputValueById('parallelogram-height')
+    //console.log(parallelogramHeight)
+
+    // parallelogram area calculation
+    parallelogramArea = parallelogramBase * parallelogramHeight
+    console.log(parallelogramArea)
+    setDisplayTextById('display-parallelogram-area')
+}
+// convert parallelogram  area in cm to m 
+document.getElementById('convert-parallelogram-area').addEventListener('click', function(){
+    setConvertAreaValue('display-parallelogram-area')
+})
+
+// re-usable function for user input 
+function getInputValueById(inputFieldId){
+    const inputField = document.getElementById(inputFieldId)
+    const inputFieldValue = inputField.value
+    const inputValue = parseInt(inputFieldValue)
+    return inputValue
+    
+}
+
+// re-usable function for set area value in display
+function setDisplayTextById(elementId){
+    const displayText = document.getElementById(elementId)
+    displayText.innerText = parallelogramArea
+}
+
+// re-usable function for convert cm to m value 
+function setConvertAreaValue(elementId){
+    const convertAreaValue = document.getElementById(elementId)
+    convertAreaValue.innerText = parallelogramArea / 100
+}
